@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Home page for the web development course project by Diana Nereni Hernandez Rodriguez." />
+        <meta name="author" content="Diana Nereni Hernandez Rodriguez" />
+        <title>Home | Diana Nereni Hernandez Rodriguez</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header><!-- ===== HEADER ===== -->
+            <div class="logo-container">
+                <img src="images/logo.svg" alt="Site Logo" class="logo" />
+                <span class="site-name">Diana Nereni Hernandez Rodriguez</span>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="chamber/index.html">Chamber</a></li>
+                    <li><a href="final/index.html">Final</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main><!-- ===== MAIN CONTENT ===== -->
+            <h1>Home</h1>
+            <section>
+                <h2>Welcome</h2>
+                <p>Welcome to my home page! This site showcases the web development projects completed during this course. Explore the Chamber of Commerce project and the Final project to see more examples of semantic HTML, CSS, and JavaScript.</p>
+            </section>
+            <section>
+                <h2>About This Site</h2>
+                <p>This website is designed using semantic HTML5 elements, ensuring accessibility and readability across all devices. All images are optimized to stay under 125 kB for fast loading and performance.</p>
+            </section>
+            <section>
+                <h2>Contact</h2>
+                <p>Feel free to reach out through my GitHub or LinkedIn profiles below for collaboration, feedback, or networking.</p>
+            </section>
+        </main>
+        <footer><!-- ===== FOOTER ===== -->
+            <div class="social-links">
+                <a href="https://github.com/YourGitHubUsername" target="_blank" aria-label="GitHub">
+                    <img src="images/github-icon.svg" alt="GitHub" />
+                </a>
+                <a href="https://www.linkedin.com/in/YourLinkedInProfile/" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin-icon.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
+                    <img src="images/twitter-icon.svg" alt="Twitter" />
+                </a>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> | Diana Nereni Hernandez Rodriguez | Mexico</p>
+            </div>
+            <p id="lastModified"></p>
+        </footer>
+        <script>
+            // Dynamically insert current year//
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+            // Display last modified date// 
+            document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+
+            // Responsive hamburger toggle
+            const menuToggle = document.getElementById("menu-toggle");
+            const nav = document.getElementById("main-nav");
+            menuToggle.addEventListener("click", () => {
+                nav.classList.toggle("open");
+            });
+        </script>
+    </body>
+</html>

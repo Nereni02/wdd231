@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Directory of the [Your City] Chamber of Commerce members — connect with local businesses and professionals." />
+  <meta name="author" content="Diana Nereni Hernández Rodríguez" />
+
+  <title>[Your City] Chamber of Commerce | Directory</title>
+
+  <!-- Normalize CSS (reset styles first) -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="[Your City] Chamber Directory" />
+  <meta property="og:description" content="Explore our Chamber of Commerce member directory to discover trusted local businesses and services." />
+  <meta property="og:image" content="https://yourdomain.com/images/social-preview.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/directory.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="[Your City] Chamber Logo" class="logo" />
+      </a>
+      <h1>[Your City] Chamber of Commerce</h1>
+      <button id="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+    </div>
+
+    <nav id="primary-nav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="directory-header">
+      <h2>Member Directory</h2>
+      <div class="view-toggle">
+        <button id="grid-view">🔲 Grid</button>
+        <button id="list-view">📋 List</button>
+      </div>
+    </section>
+
+    <section id="directory" class="grid-view">
+      <!-- Sample member card -->
+      <article class="member-card">
+        <img src="images/member1.jpg" alt="Business One Logo" />
+        <h3>Business One</h3>
+        <p>123 Main Street, Your City</p>
+        <p><a href="https://businessone.com" target="_blank">Visit Website</a></p>
+      </article>
+
+      <article class="member-card">
+        <img src="images/member2.jpg" alt="Business Two Logo" />
+        <h3>Business Two</h3>
+        <p>456 Market Ave, Your City</p>
+        <p><a href="https://businesstwo.com" target="_blank">Visit Website</a></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Contact us: info@yourchamber.com | (555) 123-4567</p>
+      <p>&copy; <span id="currentyear"></span> [Your City] Chamber of Commerce</p>
+      <p>Created by <strong>Diana Nereni Hernández Rodríguez</strong> | WDD 231</p>
+      <p>Last Updated: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/directory.js" defer></script>
+</body>
+</html>

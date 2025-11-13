@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Blue Horizon Marketing",
+      "address": "1200 Sunset Blvd, Your City",
+      "phone": "555-101-2233",
+      "website": "https://bluehorizon.com",
+      "image": "images/member1.jpg",
+      "membershipLevel": 3,
+      "description": "Full-service digital marketing agency specializing in social media and SEO."
+    },
+    {
+      "name": "Mountain View Café",
+      "address": "42 Valley Rd, Your City",
+      "phone": "555-225-8899",
+      "website": "https://mountainviewcafe.com",
+      "image": "images/member2.jpg",
+      "membershipLevel": 2,
+      "description": "A cozy local café serving organic coffee and pastries."
+    },
+    {
+      "name": "Peak Fitness Gym",
+      "address": "500 Highland Ave, Your City",
+      "phone": "555-301-7777",
+      "website": "https://peakfitnessgym.com",
+      "image": "images/member3.jpg",
+      "membershipLevel": 1,
+      "description": "State-of-the-art gym with personal training and group classes."
+    },
+    {
+      "name": "Evergreen Landscaping",
+      "address": "14 Green St, Your City",
+      "phone": "555-403-2001",
+      "website": "https://evergreenlandscaping.com",
+      "image": "images/member4.jpg",
+      "membershipLevel": 2,
+      "description": "Professional landscaping and lawn maintenance for homes and offices."
+    },
+    {
+      "name": "TechNova Solutions",
+      "address": "300 Innovation Dr, Your City",
+      "phone": "555-512-9088",
+      "website": "https://technovasolutions.com",
+      "image": "images/member5.jpg",
+      "membershipLevel": 3,
+      "description": "IT consulting and custom software development for small businesses."
+    },
+    {
+      "name": "City Lights Photography",
+      "address": "77 Maple Ln, Your City",
+      "phone": "555-614-0099",
+      "website": "https://citylightsphoto.com",
+      "image": "images/member6.jpg",
+      "membershipLevel": 1,
+      "description": "Professional photography for weddings, portraits, and corporate events."
+    },
+    {
+      "name": "Bloom & Vine Florist",
+      "address": "8 Garden Way, Your City",
+      "phone": "555-703-2234",
+      "website": "https://bloomandvine.com",
+      "image": "images/member7.jpg",
+      "membershipLevel": 2,
+      "description": "Beautiful floral arrangements for any occasion."
+    }
+  ]
+}

@@ -6,16 +6,11 @@ menuToggle.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
 
-// ===== Dynamic Footer Content =====
-
-// Current Year
+// ===== Dynamic Footer =====
 document.getElementById("currentYear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
 
-// Last Modified Date
-document.getElementById("lastModified").textContent =
-  "Last modified: " + document.lastModified;
-
-// ===== Course List Array =====
+// ===== Courses Data =====
 const courses = [
   { subject: "CSE", number: 110, title: "Introduction to Programming", credits: 2, completed: true },
   { subject: "WDD", number: 130, title: "Web Fundamentals", credits: 2, completed: true },
@@ -26,7 +21,7 @@ const courses = [
   { subject: "WDD", number: 330, title: "Web Backend Development", credits: 2, completed: false }
 ];
 
-// ===== Dynamic Course Display =====
+// ===== Display and Filter Functions =====
 const courseContainer = document.querySelector("#courseContainer");
 const totalCredits = document.querySelector("#totalCredits");
 const allBtn = document.querySelector("#allBtn");
@@ -34,7 +29,7 @@ const wddBtn = document.querySelector("#wddBtn");
 const cseBtn = document.querySelector("#cseBtn");
 
 function displayCourses(courseList) {
-  courseContainer.innerHTML = ""; // clear before rendering
+  courseContainer.innerHTML = "";
 
   courseList.forEach(course => {
     const card = document.createElement("div");
@@ -49,15 +44,14 @@ function displayCourses(courseList) {
     courseContainer.appendChild(card);
   });
 
-  // Use reduce() to sum credits
-  const total = courseList.reduce((sum, course) => sum + course.credits, 0);
+  const total = courseList.reduce((sum, c) => sum + c.credits, 0);
   totalCredits.textContent = `Total Credits: ${total}`;
 }
 
-// ===== Filter Buttons =====
+// ===== Button Filters =====
 allBtn.addEventListener("click", () => displayCourses(courses));
 wddBtn.addEventListener("click", () => displayCourses(courses.filter(c => c.subject === "WDD")));
 cseBtn.addEventListener("click", () => displayCourses(courses.filter(c => c.subject === "CSE")));
 
-// ===== Initialize with All Courses =====
+// ===== Initialize =====
 displayCourses(courses);

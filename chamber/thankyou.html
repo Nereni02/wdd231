@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-container">
+        <h2>Thank You for Applying!</h2>
+        <p>Your membership application has been received.</p>
+
+        <section id="submitted-info"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chamber of Commerce</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const output = document.getElementById("submitted-info");
+
+        output.innerHTML = `
+            <h3>Your Submitted Information</h3>
+            <p><strong>First Name:</strong> ${params.get("firstName")}</p>
+            <p><strong>Last Name:</strong> ${params.get("lastName")}</p>
+            <p><strong>Email:</strong> ${params.get("email")}</p>
+            <p><strong>Phone:</strong> ${params.get("phone")}</p>
+            <p><strong>Organization:</strong> ${params.get("organization")}</p>
+            <p><strong>Submitted On:</strong> ${params.get("timestamp")}</p>
+        `;
+    </script>
+</body>
+</html>

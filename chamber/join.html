@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join | Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-layout">
+        <section class="form-container">
+            <h2>Membership Application</h2>
+
+            <form method="get" action="thankyou.html" id="joinForm">
+                <label>
+                    First Name
+                    <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name" />
+                </label>
+
+                <label>
+                    Last Name
+                    <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name" />
+                </label>
+
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgTitle" autocomplete="organization-title" title="Enter your title within the organization" pattern="[A-Za-z\s\-]{7,}" />
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" required autocomplete="email" placeholder="example@domain.com" title="Enter your email" />
+                </label>
+
+                <label>
+                    Mobile Phone Number
+                    <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number" />
+                </label>
+
+                <label>
+                    Business / Organization Name
+                    <input type="text" name="organization" required autocomplete="organization" title="Enter your organization name" />
+                </label>
+
+                <label>
+                    Membership Level
+                    <select name="membership" required title="Choose membership level">
+                        <option value="">Select a Level</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business Description
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp" />
+
+                <input type="submit" value="Apply for Membership" />
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <div class="card" id="np-card">
+                <h3>NP Membership</h3>
+                <a href="#" data-modal="np-modal">View Benefits</a>
+            </div>
+
+            <div class="card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <a href="#" data-modal="bronze-modal">View Benefits</a>
+            </div>
+
+            <div class="card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <a href="#" data-modal="silver-modal">View Benefits</a>
+            </div>
+
+            <div class="card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <a href="#" data-modal="gold-modal">View Benefits</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chamber of Commerce</p>
+    </footer>
+
+    <!-- Modals -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>No membership fee</li>
+                <li>Access to community events</li>
+                <li>Basic directory listing</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>All NP benefits</li>
+                <li>Event discounts</li>
+                <li>Business spotlight opportunities</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Training sessions</li>
+                <li>Additional advertising exposure</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Premium advertising spots</li>
+                <li>Exclusive networking events</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Timestamp
+        document.getElementById("timestamp").value = new Date().toISOString();
+
+        // Modals
+        document.querySelectorAll("[data-modal]").forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const modal = document.getElementById(link.dataset.modal);
+                modal.style.display = "block";
+            });
+        });
+
+        document.querySelectorAll(".close").forEach(btn => {
+            btn.addEventListener("click", () => {
+                btn.parentElement.parentElement.style.display = "none";
+            });
+        });
+
+        window.addEventListener("click", e => {
+            if (e.target.classList.contains("modal")) {
+                e.target.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
